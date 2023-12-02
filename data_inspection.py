@@ -99,6 +99,7 @@ bet_action_codes = {
 """
 
 # Have to remove hands where olayer quits or get's kicked out
+# Does the first player always win? If so, I have to randomize which one I take from
 
 import json
 
@@ -136,5 +137,10 @@ for n in range (6):
 # print(player_dict)
 print("hands that went to the river:", count)
 
-
+# QUESTION: do people bet according to the math?
+for n in range (6):
+    file_path = f"/workspaces/aotm_project/data/hands_valid_{n+1}.json"
+    with open(file_path, 'r') as file:
+    # Load the JSON data from the file
+        data_list = [json.loads(line) for line in file]
 
