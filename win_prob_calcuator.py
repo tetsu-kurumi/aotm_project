@@ -277,6 +277,20 @@ def handle_ties(hand1, hand2, board1, board2):
         else:
             return "tie"
 
+
+def win_prob(board, own_hands):
+    opponent_betting_rate = 0.3
+
+    suits = "cdhs"
+    ranks = "AKQJT98765432"
+    deck = [f"{rank}{suit}" for rank in ranks for suit in suits]
+    values = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, 'T': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14}
+
+    opponent_range = generate_pocket_combination_range(opponent_betting_rate)
+    win_prob = calculate_win_percentage(own_hands, opponent_range, board)
+    return win_prob
+
+"""
 if __name__ == "__main__":
     # Variables
     board = ["Ts", "5c", "7h"]
@@ -291,4 +305,4 @@ if __name__ == "__main__":
     opponent_range = generate_pocket_combination_range(opponent_betting_rate)
     win_prob = calculate_win_percentage(own_hands, opponent_range, board)
     print("win prob is", win_prob)
-
+"""
