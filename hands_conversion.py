@@ -87,6 +87,7 @@ def win_percentage_dict(user_dict, flop, turn, river, entry):
     betsize_info_f = get_betsize("f", user_dict, entry, betted)
     betsize_f = betsize_info_f[1]
     bet_size_array.append(betsize_f)
+    json.dump({entry["id"]: entry_dict}, win_prob_f_array_file)
     win_prob_array.append(win_prob_f)
     betted += betsize_f
     hands_dict["f"] = {"winprob": win_prob_f, "betsize_info": betsize_info_f}
@@ -118,29 +119,43 @@ if __name__ == "__main__":
         win_prob_array = []
         with open(file_path, 'r') as file:
             # Write to a JSON file
-            with open(f'hands_win_percentages_{n+1}.json', 'w') as json_file:
-    
+            with open(f'hands_win_percentages.json', 'a') as json_file:
+                json_file.seek(0, 2)
                 # Load the JSON data from the file
                 data_list = [json.loads(line) for line in file]
                 # Iterate through the data
-                i = 0
-                for entry in data_list:
-                    flop = entry["board"][:3]
-                    turn = entry["board"][:4]
-                    river = entry["board"][:5]
-                    entry_dict = {}
-                    if entry["num_players"] == 2:
-                        for user_dict in entry["players"]:
-                            hands_dict = win_percentage_dict(user_dict, flop, turn, river, entry)
-                            entry_dict[user_dict["user"]] = hands_dict
-                        json.dump({entry["id"]: entry_dict}, json_file)
-                    i += 1
-                    print(f"processed iteration {i}")
-                    print({entry["id"]: entry_dict})
-                    if len(bet_size_array) >= 2000:
-                        print(win_prob_array)
-                        print(bet_size_array)
-                        break
+                with open(f'win_prob_p_arrays_{n+1}.json', 'a') as win_prob_p_array_file:
+                    win_prob_p_array_file.seek(0, 2)
+                    with open(f'bets_p_arrays_{n+1}.json', 'a') as bets_p_array_file:
+                        bets_p_array_file.seek(0, 2)
+                        with open(f'win_prob_f_arrays_{n+1}.json', 'a') as win_prob_f_array_file:
+                            win_prob_f_array_file.seek(0, 2)
+                            with open(f'bets_f_arrays_{n+1}.json', 'a') as bets_f_array_file:
+                                bets_f_array_file.seek(0, 2)
+                                with open(f'win_prob_t_arrays_{n+1}.json', 'a') as win_prob_t_array_file:
+                                    win_prob_t_array_file.seek(0, 2)
+                                    with open(f'bets_t_arrays_{n+1}.json', 'a') as bets_t_array_file:
+                                        bets_t_array_file.seek(0, 2)
+                                        with open(f'win_prob_r_arrays_{n+1}.json', 'a') as win_prob_r_array_file:
+                                            win_prob_r_array_file.seek(0, 2)
+                                            with open(f'bets_r_arrays_{n+1}.json', 'a') as bets_r_array_file:
+                                                bets_r_array_file.seek(0, 2)
+                    i = 0
+                    for entry in data_list:
+                        flop = entry["board"][:3]
+                        turn = entry["board"][:4]
+                        river = entry["board"][:5]
+                        entry_dict = {}
+                        if entry["num_players"] == 2:
+                            for user_dict in entry["players"]:
+                                hands_dict = win_percentage_dict(user_dict, flop, turn, river, entry)
+                                entry_dict[user_dict["user"]] = hands_dict
+                            json.dump({entry["id"]: entry_dict}, json_file)
+                        i += 1
+                        print(f"processed iteration {i}")
+                        if i = 10:
+                            break
+
 """
 undefined: is because when a player goes all in, there is no action to be played anymore
 
