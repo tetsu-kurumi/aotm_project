@@ -140,7 +140,8 @@ if __name__ == "__main__":
             data_list = [json.loads(line) for line in file]
             # Iterate through the data
             for entry in data_list:
-                if entry["id"] >= 144298 and entry["id"] < 152298:
+                if entry["id"] >= 152298:
+                    continue_switch = True
                     flop = entry["board"][:3]
                     turn = entry["board"][:4]
                     river = entry["board"][:5]
