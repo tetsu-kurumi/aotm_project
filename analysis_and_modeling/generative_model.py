@@ -128,6 +128,11 @@ if __name__ == "__main__":
     simulate_generative_model(variable_type)
     print("DONE!")
 
+# Decide how much to bet/call proportional to the pot (and somewhat proportional to their bankroll)
+"""
+total sum of hands to be extracted over 94 players: 180830 out of 800,000 ish data entries
+avg: 1924
+"""
 """
 WHEN DATA is NONE:
 when the action is undefined
@@ -136,6 +141,46 @@ when the win prob is 1 or 0 -> you can bet however much you want or never bet: d
 
 variables I can change to make the model predict human behavior better:
 - noise
+"""
+
+"""
+caveats for the model:
+probably should've caculated the win probs based on empirical evidence of the opponent's betting pattern (would have been different for each stage)
+-> trying to incorporate this with the noise
+"""
+
+"""
+Presentation
+- explain the dataset and the limitations and why I decided to do what I did (e.g. headsup, not focusing on folds (because there are none), etc)
+"""
+
+"""
+Variables to decide how to bet
+- Bankroll 
+- Potsize (All in will be measured differently (anything above x10 or sth))
+- Bullishness (own range)
+- Bluff prob
+
+How the variables will interact
+
+compare a purely mathematical model vs one that has learned how people deviate from them
+check who has the most winnings and use their data? = count the hands with 0 winnings
+-> maybe this would correlate with how much they deviate from the math model?
+"""
+
+"""
+DATA INFO
+Avg bankroll is  80154.73618429388
+Highest bankroll is  1107305561
+Lowest bankroll is  1
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+[5280000, 5295000, 5316672, 5440000, 5555000, 5640000, 5780000, 5782500, 6055000, 6206500, 6227500, 6307500, 6455000, 6715000, 6823000, 6862500, 6945000, 6974500, 7360000, 7560000, 7622500, 7635000, 7715000, 7720000, 8035000, 8035000, 8035000, 8450000, 9120000, 9327500, 9375000, 9383000, 9455000, 9511000, 9615000, 9639000, 10055000, 10602500, 10680000, 10692500, 11550000, 11600000, 11960000, 12480000, 12630000, 12740000, 47051336, 48525668, 65496492, 65496692, 65497502, 65498162, 65499122, 65545102, 65545392, 65552652, 65552682, 65555082, 65562102, 65564542, 65566972, 65569369, 65571039, 65571309, 65572119, 729325169, 729412914, 729455400, 729462982, 729463012, 729464092, 729479262, 729480288, 729487402, 729491472, 729541228, 729566146, 1107260864, 1107262139, 1107262264, 1107262389, 1107262889, 1107263764, 1107267210, 1107267300, 1107269730, 1107285305, 1107295616, 1107297276, 1107297536, 1107297726, 1107298006, 1107298006, 1107298006, 1107298246, 1107298276, 1107298346, 1107304756, 1107304846, 1107305561]
+"""
+
+"""
+PLAN
+
+according to win prob, decide betting amount   # SHOULD I CARE ABOUT call OR bet (bet = 0 is check)
 
 for each player
     for each stage (but preflop):
@@ -145,7 +190,7 @@ for each player
         # set inefficiency for each stage by incorporating different psychological phenomena each time (e.g. risk perception, sunk cost fallacy, intuitive probability)
         # inefficiency is the variable we are interested in
         if bluff:
- 
+    
     add noise and return decided_betting_amount & decided_betting_amount_to_bankroll
 
     compare these with actual data
