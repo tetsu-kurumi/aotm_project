@@ -1,0 +1,45 @@
+"optimal" vs "observation"
+    player_of_interest: ['azspinner', 'CFigor', 'perfecdoh', 'keeae', 'DopeyTwat', 'fuhzee', 'carrot', 'JKhearts', 'kfish', 'gfw', 'sagerbot', 'Gabe', 'panfried', 'coming', 'Funky', 'ile', 'ChrisLinn', 'gsr', 'DrOakland', 'mt', 'BlackBart', 'Benja', 'lexstraus', 'sass', 'beaty', 'neverx', 'JADC', 'Blaze', 'lilly', 'SnakeEyes', 'is314onu', 'Harry^T', 'Patoot', 'Sakura', 'TripSixes', 'tctim', 'Zwierdo', 'Zag', 'evercall', 'K6', '__', 'snoball', 'gustav', 'Massa', 'Rumford', 'tvp', 'superman', 'DM', 'going', 'condor', 'Gunshot', 'show', 'jvegas2', 'FX', 'GAR2', 'alfalfa', 'bigkicker', 'Eldon', 'CybrTigr', 'Sham', 'Voyeur', 'RiverMan', 'Nermal', 'MegaHertz', 'Gremlin', 'DP', 'Muck', 'reTTard', 'Patti', 'EmtaE', 'Kevin_Un', 'Muck_It', 'robw', 'RiverRatt', 'Benway', 'donguy', 'numskull', 'kk', 'rivrgod', 'Flash_man', 'KisMyAce', 'Sonar', 'Grizz', 'Quick', 'brian', 'zxc', 'num', 'Swagger', 'tilted', 'spew-boy', 'exosis', 'Winner666', 'po147', 'theking']
+    top 94 players
+        avg_mae_f 1226.7683674828377
+        avg_mae_t 2164.0487775364186
+        avg_mae_r 4299.623723604653
+        avg_correlation_coefficient_f -0.2355940859865487
+        avg_correlation_coefficient_t 0.25507731217810375
+        avg_correlation_coefficient_r 0.2250909753525031
+        avg_p_value_f 0.08614286781571047
+        avg_p_value_t 0.048414821474931605
+        avg_p_value_r 0.05576846200169039
+    player_of_interest: ['azspinner', 'CFigor', 'perfecdoh', 'keeae', 'DopeyTwat', 'fuhzee', 'carrot', 'JKhearts', 'kfish', 'gfw', 'sagerbot', 'Gabe', 'panfried', 'coming', 'Funky', 'ile', 'ChrisLinn', 'gsr', 'DrOakland', 'mt', 'BlackBart', 'Benja', 'lexstraus', 'sass', 'beaty', 'neverx', 'JADC', 'Blaze', 'lilly', 'SnakeEyes', 'is314onu', 'Harry^T', 'Patoot', 'Sakura', 'TripSixes', 'tctim', 'Zwierdo', 'Zag', 'evercall', 'K6', '__', 'snoball', 'gustav', 'Massa', 'Rumford', 'tvp', 'superman', 'DM', 'going', 'condor']
+    top 50 players
+        avg_mae_f 1668.1870328929592
+        avg_mae_t 2629.3843782859713
+        avg_mae_r 5219.207976055469
+        avg_correlation_coefficient_f -0.22764715478205386
+        avg_correlation_coefficient_t 0.21324506818769134
+        avg_correlation_coefficient_r 0.23930573891333196
+        avg_p_value_f 0.09533786771796562
+        avg_p_value_t 0.05772526496862567
+        avg_p_value_r 0.0451762462552156
+    player_of_interest: ['azspinner', 'CFigor', 'perfecdoh', 'keeae', 'DopeyTwat', 'fuhzee', 'carrot', 'JKhearts', 'kfish', 'gfw', 'sagerbot', 'Gabe', 'panfried', 'coming', 'Funky', 'ile', 'ChrisLinn', 'gsr', 'DrOakland', 'mt', 'BlackBart', 'Benja', 'lexstraus', 'sass', 'beaty']
+    top 25 players
+        avg_mae_f 2309.1846405178303
+        avg_mae_t 3886.8075697641943
+        avg_mae_r 6717.630849676668
+        avg_correlation_coefficient_f -0.3170049263962466
+        avg_correlation_coefficient_t 0.26088129963798784
+        avg_correlation_coefficient_r 0.2880647147806785
+        avg_p_value_f 0.07719165990369761
+        avg_p_value_t 0.03969340347017609
+        avg_p_value_r 0.005975542210442692
+    player_of_interest: ['azspinner', 'CFigor', 'perfecdoh', 'keeae', 'DopeyTwat', 'fuhzee', 'carrot', 'JKhearts', 'kfish', 'gfw']
+    top 10 players
+        avg_mae_f 3792.179469456024
+        avg_mae_t 7367.97253266792
+        avg_mae_r 10199.892667594579
+        avg_correlation_coefficient_f -0.4339290774495871
+        avg_correlation_coefficient_t 0.26372421741023344
+        avg_correlation_coefficient_r 0.273179916607399
+        avg_p_value_f 0.027707152449407663
+        avg_p_value_t 0.01125631097832334
+        avg_p_value_r 0.0016230398856121801
