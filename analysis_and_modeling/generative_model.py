@@ -30,8 +30,19 @@ def get_pot(data, stage):
     
 # CHANGE THE DEVIATION FROM THE OPTIMAL POLICY DEPENDING ON THE GENERATIVE MODEL TYPE
 def compute_adjusted_betting_amount(variable_type, optimal_betting_amount, call):
+    if variable_type == "over_confidence":
+        return optimal_betting_amount * 2
     if variable_type == "optimal":
-        return optimal_betting_amount
+        return optimal_betting_amount 
+    if variable_type == "under_confidence": # opposite of bluffing
+        prob = 0.3
+        random_number = random.random()
+        if random_number < prob:
+            return 0
+        else:
+            return optimal_betting_amount
+    
+    
 
 # TODO: Write add_noise
 def add_noise(betting_amount, variable_type):
@@ -112,8 +123,8 @@ def simulate_generative_model(variable_type):
                     
 
 if __name__ == "__main__":
-    variable_type_list = ["optimal"]
-    variable_type = "optimal"
+    variable_type_list = ["optimal", "over_confidence", "under_confidence"]
+    variable_type = "under_confidence"
     simulate_generative_model(variable_type)
     print("DONE!")
 
