@@ -124,7 +124,7 @@ def simulate_generative_model(variable_type):
 
 if __name__ == "__main__":
     variable_type_list = ["optimal", "over_confidence", "under_confidence"]
-    variable_type = "under_confidence"
+    variable_type = "over_confidence"
     simulate_generative_model(variable_type)
     print("DONE!")
 

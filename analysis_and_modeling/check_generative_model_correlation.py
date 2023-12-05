@@ -37,7 +37,7 @@ def data_interaction(data_list):
             if entry["variable_type"] == "observation":
                 observation_betsize_list = entry["data"][stage]
                 observation_betsize_list = remove_nulls(observation_betsize_list)
-            if entry["variable_type"] == "under_confidence":
+            if entry["variable_type"] == "optimal":
                 model_betsize_list = entry["data"][stage]
                 model_betsize_list = remove_nulls(model_betsize_list)
             
