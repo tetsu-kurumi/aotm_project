@@ -42,9 +42,6 @@ def compute_adjusted_betting_amount(variable_type, optimal_betting_amount, call)
         else:
             return optimal_betting_amount
     
-    
-
-# TODO: Write add_noise
 def add_noise(betting_amount, variable_type):
     if variable_type == "optimal":
         noise_rate = 1
@@ -68,7 +65,7 @@ def simulate_generative_model(variable_type):
 
     for player in hand_num_dict:
         betting_amounts = {"variable_type": variable_type, "data":{}}
-        file_path = f'/Users/tetsu/Documents/School/Class/CGSC274/aotm_project/data/data_per_player/data_{player}.json'
+        file_path = f'/Users/tetsu/Documents/School/Class/CGSC 472/aotm_project/data/data_per_player/data_{player}.json'
         with open(file_path, 'r') as file:
             data_list = [json.loads(line) for line in file]
             for stage in stages:
@@ -86,8 +83,8 @@ def simulate_generative_model(variable_type):
                         action = data["win_prob_to_bet_info"][stage]["bet_info"]["action"]
                         pot = get_pot(data, stage)
                         if pot == None:
-                                stage_betting_amounts.append(None)
-                                will_continue = False
+                            stage_betting_amounts.append(None)
+                            will_continue = False
                         
                         if will_continue:
                             if win_prob == 1 or win_prob == 0:
@@ -116,7 +113,7 @@ def simulate_generative_model(variable_type):
 
                 betting_amounts["data"][stage] = stage_betting_amounts
 
-        with open(f'/Users/tetsu/Documents/School/Class/CGSC274/aotm_project/analysis_and_modeling/data/betting_amounts{player}.json', 'a') as json_file:
+        with open(f'/Users/tetsu/Documents/School/Class/CGSC 472/aotm_project/data/betting_amounts{player}.json', 'a') as json_file:
             data_to_write = betting_amounts
             json_file.write(json.dumps(data_to_write) + '\n') 
         print(f"processed {player}")
