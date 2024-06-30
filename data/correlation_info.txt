@@ -1,0 +1,576 @@
+Baseline (Version 4)
+
+Result for top 94 players
+self.mae_f: 473.02684
+self.correlation_coefficient_f: 0.01489
+self.p_value_f: 0.0000000000
+self.mae_t: 1203.25897
+self.correlation_coefficient_t: 0.01800
+self.p_value_t: 0.0000000000
+self.mae_r: 3718.53672
+self.correlation_coefficient_r: 0.13569
+self.p_value_r: 0.0000000000
+
+Result for top 50 players
+self.mae_f: 674.86952
+self.correlation_coefficient_f: 0.01161
+self.p_value_f: 0.0000045149
+self.mae_t: 1542.25175
+self.correlation_coefficient_t: 0.01017
+self.p_value_t: 0.0000560513
+self.mae_r: 4327.42202
+self.correlation_coefficient_r: 0.13724
+self.p_value_r: 0.0000000000
+
+Result for top 25 players
+self.mae_f: 694.50668
+self.correlation_coefficient_f: 0.02900
+self.p_value_f: 0.0000000000
+self.mae_t: 1893.02164
+self.correlation_coefficient_t: 0.01009
+self.p_value_t: 0.0025864806
+self.mae_r: 5035.24280
+self.correlation_coefficient_r: 0.23737
+self.p_value_r: 0.0000000000
+
+Result for top 10 players
+self.mae_f: 1468.25902
+self.correlation_coefficient_f: 0.02257
+self.p_value_f: 0.0006992097
+self.mae_t: 4322.27758
+self.correlation_coefficient_t: 0.00588
+self.p_value_t: 0.3736882021
+self.mae_r: 8604.99626
+self.correlation_coefficient_r: 0.28616
+self.p_value_r: 0.0000000000
+
+-----------------------------------------------------------
+
+Version 5
+
+Result for top 94 players
+self.mae_f: 55.86223
+self.correlation_coefficient_f: 0.00299
+self.p_value_f: 0.1001949605
+self.mae_t: 83.90026
+self.correlation_coefficient_t: 0.00244
+self.p_value_t: 0.1793506052
+self.mae_r: 150.48513
+self.correlation_coefficient_r: 0.00652
+self.p_value_r: 0.0004772457
+
+Result for top 50 players
+self.mae_f: 64.45456
+self.correlation_coefficient_f: 0.00267
+self.p_value_f: 0.2917331236
+self.mae_t: 89.44219
+self.correlation_coefficient_t: 0.00231
+self.p_value_t: 0.3602775068
+self.mae_r: 166.50647
+self.correlation_coefficient_r: 0.00748
+self.p_value_r: 0.0039571163
+
+Result for top 25 players
+self.mae_f: 79.27537
+self.correlation_coefficient_f: 0.00219
+self.p_value_f: 0.5139286596
+self.mae_t: 102.90692
+self.correlation_coefficient_t: 0.00195
+self.p_value_t: 0.5595834471
+self.mae_r: 194.84806
+self.correlation_coefficient_r: 0.00323
+self.p_value_r: 0.3499430075
+
+Result for top 10 players
+self.mae_f: 131.82431
+self.correlation_coefficient_f: 0.01269
+self.p_value_f: 0.0566975328
+self.mae_t: 151.13157
+self.correlation_coefficient_t: 0.01298
+self.p_value_t: 0.0496793165
+self.mae_r: 378.99766
+self.correlation_coefficient_r: 0.00321
+self.p_value_r: 0.6389747011
+
+-----------------------------------------------------------
+
+Version 6
+
+Result for top 94 players
+self.mae_f: 101.91146
+self.correlation_coefficient_f: 0.05809
+self.p_value_f: 0.0000000000
+self.mae_t: 154.57859
+self.correlation_coefficient_t: 0.03897
+self.p_value_t: 0.0000000000
+self.mae_r: 327.82031
+self.correlation_coefficient_r: 0.03634
+self.p_value_r: 0.0000000000
+
+Result for top 50 players
+self.mae_f: 116.87237
+self.correlation_coefficient_f: 0.07462
+self.p_value_f: 0.0000000000
+self.mae_t: 169.06395
+self.correlation_coefficient_t: 0.04724
+self.p_value_t: 0.0000000000
+self.mae_r: 323.40898
+self.correlation_coefficient_r: 0.07064
+self.p_value_r: 0.0000000000
+
+Result for top 25 players
+self.mae_f: 142.56443
+self.correlation_coefficient_f: 0.08968
+self.p_value_f: 0.0000000000
+self.mae_t: 193.48290
+self.correlation_coefficient_t: 0.05222
+self.p_value_t: 0.0000000000
+self.mae_r: 352.66737
+self.correlation_coefficient_r: 0.09024
+self.p_value_r: 0.0000000000
+
+Result for top 10 players
+self.mae_f: 246.91517
+self.correlation_coefficient_f: 0.09730
+self.p_value_f: 0.0000000000
+self.mae_t: 316.18450
+self.correlation_coefficient_t: 0.04645
+self.p_value_t: 0.0000000000
+self.mae_r: 521.86175
+self.correlation_coefficient_r: 0.09743
+self.p_value_r: 0.0000000000
+
+-----------------------------------------------------------
+
+Version 7
+
+Result for top 94 players
+self.mae_f: 504.89336
+self.correlation_coefficient_f: 0.16369
+self.p_value_f: 0.0000000000
+self.mae_t: 726.94910
+self.correlation_coefficient_t: 0.10686
+self.p_value_t: 0.0000000000
+self.mae_r: 1277.68860
+self.correlation_coefficient_r: 0.10012
+self.p_value_r: 0.0000000000
+
+Result for top 50 players
+self.mae_f: 545.57760
+self.correlation_coefficient_f: 0.15701
+self.p_value_f: 0.0000000000
+self.mae_t: 765.13579
+self.correlation_coefficient_t: 0.11565
+self.p_value_t: 0.0000000000
+self.mae_r: 1314.95435
+self.correlation_coefficient_r: 0.09183
+self.p_value_r: 0.0000000000
+
+Result for top 25 players
+self.mae_f: 633.26232
+self.correlation_coefficient_f: 0.18389
+self.p_value_f: 0.0000000000
+self.mae_t: 863.69867
+self.correlation_coefficient_t: 0.12225
+self.p_value_t: 0.0000000000
+self.mae_r: 1469.17121
+self.correlation_coefficient_r: 0.09170
+self.p_value_r: 0.0000000000
+
+Result for top 10 players
+self.mae_f: 880.29829
+self.correlation_coefficient_f: 0.17983
+self.p_value_f: 0.0000000000
+self.mae_t: 1148.50932
+self.correlation_coefficient_t: 0.09992
+self.p_value_t: 0.0000000000
+self.mae_r: 1690.46147
+self.correlation_coefficient_r: 0.24276
+self.p_value_r: 0.0000000000
+
+-----------------------------------------------------------
+
+Version 8
+
+Result for top 94 players
+self.mae_f: 769.74754
+self.correlation_coefficient_f: 0.14957
+self.p_value_f: 0.0000000000
+self.mae_t: 1092.09601
+self.correlation_coefficient_t: 0.13502
+self.p_value_t: 0.0000000000
+self.mae_r: 1861.70704
+self.correlation_coefficient_r: 0.21504
+self.p_value_r: 0.0000000000
+
+Result for top 50 players
+self.mae_f: 824.50106
+self.correlation_coefficient_f: 0.16938
+self.p_value_f: 0.0000000000
+self.mae_t: 1149.63769
+self.correlation_coefficient_t: 0.12264
+self.p_value_t: 0.0000000000
+self.mae_r: 1894.09786
+self.correlation_coefficient_r: 0.24014
+self.p_value_r: 0.0000000000
+
+Result for top 25 players
+self.mae_f: 955.22793
+self.correlation_coefficient_f: 0.18518
+self.p_value_f: 0.0000000000
+self.mae_t: 1302.02703
+self.correlation_coefficient_t: 0.12018
+self.p_value_t: 0.0000000000
+self.mae_r: 2083.57141
+self.correlation_coefficient_r: 0.27510
+self.p_value_r: 0.0000000000
+
+Result for top 10 players
+self.mae_f: 1304.56653
+self.correlation_coefficient_f: 0.18859
+self.p_value_f: 0.0000000000
+self.mae_t: 1677.81515
+self.correlation_coefficient_t: 0.09843
+self.p_value_t: 0.0000000000
+self.mae_r: 2513.24942
+self.correlation_coefficient_r: 0.28781
+self.p_value_r: 0.0000000000
+
+-----------------------------------------------------------
+
+Version 9
+
+Result for top 94 players
+self.mae_f: 1033.39326
+self.correlation_coefficient_f: 0.16590
+self.p_value_f: 0.0000000000
+self.mae_t: 1468.22223
+self.correlation_coefficient_t: 0.13941
+self.p_value_t: 0.0000000000
+self.mae_r: 2482.47033
+self.correlation_coefficient_r: 0.22615
+self.p_value_r: 0.0000000000
+
+Result for top 50 players
+self.mae_f: 1107.76596
+self.correlation_coefficient_f: 0.15458
+self.p_value_f: 0.0000000000
+self.mae_t: 1538.34315
+self.correlation_coefficient_t: 0.14107
+self.p_value_t: 0.0000000000
+self.mae_r: 2536.73544
+self.correlation_coefficient_r: 0.23647
+self.p_value_r: 0.0000000000
+
+Result for top 25 players
+self.mae_f: 1283.96710
+self.correlation_coefficient_f: 0.15891
+self.p_value_f: 0.0000000000
+self.mae_t: 1739.65639
+self.correlation_coefficient_t: 0.14282
+self.p_value_t: 0.0000000000
+self.mae_r: 2792.30156
+self.correlation_coefficient_r: 0.26485
+self.p_value_r: 0.0000000000
+
+Result for top 10 players
+self.mae_f: 1740.61564
+self.correlation_coefficient_f: 0.18726
+self.p_value_f: 0.0000000000
+self.mae_t: 2224.50748
+self.correlation_coefficient_t: 0.12347
+self.p_value_t: 0.0000000000
+self.mae_r: 3369.78702
+self.correlation_coefficient_r: 0.27665
+self.p_value_r: 0.0000000000
+
+-----------------------------------------------------------
+
+Version 8
+
+Result for top 94 players
+self.mae_f: 769.74754
+self.correlation_coefficient_f: 0.14957
+self.p_value_f: 0.0000000000
+self.mae_t: 1092.09601
+self.correlation_coefficient_t: 0.13502
+self.p_value_t: 0.0000000000
+self.mae_r: 1861.70704
+self.correlation_coefficient_r: 0.21504
+self.p_value_r: 0.0000000000
+
+Result for top 50 players
+self.mae_f: 824.50106
+self.correlation_coefficient_f: 0.16938
+self.p_value_f: 0.0000000000
+self.mae_t: 1149.63769
+self.correlation_coefficient_t: 0.12264
+self.p_value_t: 0.0000000000
+self.mae_r: 1894.09786
+self.correlation_coefficient_r: 0.24014
+self.p_value_r: 0.0000000000
+
+Result for top 25 players
+self.mae_f: 955.22793
+self.correlation_coefficient_f: 0.18518
+self.p_value_f: 0.0000000000
+self.mae_t: 1302.02703
+self.correlation_coefficient_t: 0.12018
+self.p_value_t: 0.0000000000
+self.mae_r: 2083.57141
+self.correlation_coefficient_r: 0.27510
+self.p_value_r: 0.0000000000
+
+Result for top 10 players
+self.mae_f: 1304.56653
+self.correlation_coefficient_f: 0.18859
+self.p_value_f: 0.0000000000
+self.mae_t: 1677.81515
+self.correlation_coefficient_t: 0.09843
+self.p_value_t: 0.0000000000
+self.mae_r: 2513.24942
+self.correlation_coefficient_r: 0.28781
+self.p_value_r: 0.0000000000
+
+-----------------------------------------------------------
+
+Version 10
+
+Result for top 94 players
+self.mae_f: 443.55598
+self.correlation_coefficient_f: 0.01423
+self.p_value_f: 0.0000000000
+self.mae_t: 1148.72377
+self.correlation_coefficient_t: 0.01861
+self.p_value_t: 0.0000000000
+self.mae_r: 3657.31335
+self.correlation_coefficient_r: 0.13066
+self.p_value_r: 0.0000000000
+
+Result for top 50 players
+self.mae_f: 635.44410
+self.correlation_coefficient_f: 0.01133
+self.p_value_f: 0.0000075525
+self.mae_t: 1467.28029
+self.correlation_coefficient_t: 0.01060
+self.p_value_t: 0.0000267704
+self.mae_r: 4264.69342
+self.correlation_coefficient_r: 0.13397
+self.p_value_r: 0.0000000000
+
+Result for top 25 players
+self.mae_f: 624.99334
+self.correlation_coefficient_f: 0.02999
+self.p_value_f: 0.0000000000
+self.mae_t: 1758.93709
+self.correlation_coefficient_t: 0.01088
+self.p_value_t: 0.0011524532
+self.mae_r: 4916.71319
+self.correlation_coefficient_r: 0.24273
+self.p_value_r: 0.0000000000
+
+Result for top 10 players
+self.mae_f: 1330.47912
+self.correlation_coefficient_f: 0.02383
+self.p_value_f: 0.0003433118
+self.mae_t: 3973.58586
+self.correlation_coefficient_t: 0.00648
+self.p_value_t: 0.3274525075
+self.mae_r: 8441.76600
+self.correlation_coefficient_r: 0.28917
+self.p_value_r: 0.0000000000
+
+-----------------------------------------------------------
+
+Version 11
+
+Result for top 94 players
+self.mae_f: 671.36141
+self.correlation_coefficient_f: 0.19264
+self.p_value_f: 0.0000000000
+self.mae_t: 957.73008
+self.correlation_coefficient_t: 0.16764
+self.p_value_t: 0.0000000000
+self.mae_r: 1664.79672
+self.correlation_coefficient_r: 0.26125
+self.p_value_r: 0.0000000000
+
+Result for top 50 players
+self.mae_f: 711.65740
+self.correlation_coefficient_f: 0.18751
+self.p_value_f: 0.0000000000
+self.mae_t: 1001.98323
+self.correlation_coefficient_t: 0.14935
+self.p_value_t: 0.0000000000
+self.mae_r: 1694.32818
+self.correlation_coefficient_r: 0.28347
+self.p_value_r: 0.0000000000
+
+Result for top 25 players
+self.mae_f: 817.25819
+self.correlation_coefficient_f: 0.20563
+self.p_value_f: 0.0000000000
+self.mae_t: 1121.23618
+self.correlation_coefficient_t: 0.15435
+self.p_value_t: 0.0000000000
+self.mae_r: 1843.27348
+self.correlation_coefficient_r: 0.34166
+self.p_value_r: 0.0000000000
+
+Result for top 10 players
+self.mae_f: 1070.48932
+self.correlation_coefficient_f: 0.20298
+self.p_value_f: 0.0000000000
+self.mae_t: 1374.65139
+self.correlation_coefficient_t: 0.13626
+self.p_value_t: 0.0000000000
+self.mae_r: 2132.06913
+self.correlation_coefficient_r: 0.39442
+self.p_value_r: 0.0000000000
+
+-----------------------------------------------------------
+
+Version 4
+
+Result for top 94 players
+self.mae_f: 473.02684
+self.correlation_coefficient_f: 0.01489
+self.p_value_f: 0.0000000000
+self.mae_t: 1203.25897
+self.correlation_coefficient_t: 0.01800
+self.p_value_t: 0.0000000000
+self.mae_r: 3718.53672
+self.correlation_coefficient_r: 0.13569
+self.p_value_r: 0.0000000000
+
+Result for top 50 players
+self.mae_f: 674.86952
+self.correlation_coefficient_f: 0.01161
+self.p_value_f: 0.0000045149
+self.mae_t: 1542.25175
+self.correlation_coefficient_t: 0.01017
+self.p_value_t: 0.0000560513
+self.mae_r: 4327.42202
+self.correlation_coefficient_r: 0.13724
+self.p_value_r: 0.0000000000
+
+Result for top 25 players
+self.mae_f: 694.50668
+self.correlation_coefficient_f: 0.02900
+self.p_value_f: 0.0000000000
+self.mae_t: 1893.02164
+self.correlation_coefficient_t: 0.01009
+self.p_value_t: 0.0025864806
+self.mae_r: 5035.24280
+self.correlation_coefficient_r: 0.23737
+self.p_value_r: 0.0000000000
+
+Result for top 10 players
+self.mae_f: 1468.25902
+self.correlation_coefficient_f: 0.02257
+self.p_value_f: 0.0006992097
+self.mae_t: 4322.27758
+self.correlation_coefficient_t: 0.00588
+self.p_value_t: 0.3736882021
+self.mae_r: 8604.99626
+self.correlation_coefficient_r: 0.28616
+self.p_value_r: 0.0000000000
+
+-----------------------------------------------------------
+
+Version 12
+
+Result for top 94 players
+self.mae_f: 676.93995
+self.correlation_coefficient_f: 0.56598
+self.p_value_f: 0.0000000000
+self.mae_t: 1115.82682
+self.correlation_coefficient_t: 0.31827
+self.p_value_t: 0.0000000000
+self.mae_r: 2473.92472
+self.correlation_coefficient_r: 0.39311
+self.p_value_r: 0.0000000000
+
+Result for top 50 players
+self.mae_f: 674.11659
+self.correlation_coefficient_f: 0.71895
+self.p_value_f: 0.0000000000
+self.mae_t: 1122.99376
+self.correlation_coefficient_t: 0.39651
+self.p_value_t: 0.0000000000
+self.mae_r: 2612.81256
+self.correlation_coefficient_r: 0.43425
+self.p_value_r: 0.0000000000
+
+Result for top 25 players
+self.mae_f: 715.29956
+self.correlation_coefficient_f: 0.74706
+self.p_value_f: 0.0000000000
+self.mae_t: 1175.74760
+self.correlation_coefficient_t: 0.44111
+self.p_value_t: 0.0000000000
+self.mae_r: 2787.18464
+self.correlation_coefficient_r: 0.50702
+self.p_value_r: 0.0000000000
+
+Result for top 10 players
+self.mae_f: 726.82990
+self.correlation_coefficient_f: 0.84195
+self.p_value_f: 0.0000000000
+self.mae_t: 1226.91172
+self.correlation_coefficient_t: 0.67544
+self.p_value_t: 0.0000000000
+self.mae_r: 3611.64442
+self.correlation_coefficient_r: 0.58220
+self.p_value_r: 0.0000000000
+
+-----------------------------------------------------------
+
+Version 13
+
+Result for top 94 players
+self.mae_f: 151.77422
+self.correlation_coefficient_f: 0.16850
+self.p_value_f: 0.0000000000
+self.mae_t: 1002.48504
+self.correlation_coefficient_t: 0.06494
+self.p_value_t: 0.0000000000
+self.mae_r: 7253.55042
+self.correlation_coefficient_r: 0.18293
+self.p_value_r: 0.0000000000
+
+Result for top 50 players
+self.mae_f: 121.36918
+self.correlation_coefficient_f: 0.72289
+self.p_value_f: 0.0000000000
+self.mae_t: 881.53367
+self.correlation_coefficient_t: 0.09716
+self.p_value_t: 0.0000000000
+self.mae_r: 9318.10883
+self.correlation_coefficient_r: 0.19113
+self.p_value_r: 0.0000000000
+
+Result for top 25 players
+self.mae_f: 143.34966
+self.correlation_coefficient_f: 0.70569
+self.p_value_f: 0.0000000000
+self.mae_t: 1009.23000
+self.correlation_coefficient_t: 0.10298
+self.p_value_t: 0.0000000000
+self.mae_r: 11581.62084
+self.correlation_coefficient_r: 0.26575
+self.p_value_r: 0.0000000000
+
+Result for top 10 players
+self.mae_f: 178.42433
+self.correlation_coefficient_f: 0.90763
+self.p_value_f: 0.0000000000
+self.mae_t: 887.99531
+self.correlation_coefficient_t: 0.59447
+self.p_value_t: 0.0000000000
+self.mae_r: 22149.93889
+self.correlation_coefficient_r: 0.37204
+self.p_value_r: 0.0000000000
+
+-----------------------------------------------------------
+

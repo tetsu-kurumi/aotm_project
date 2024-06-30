@@ -1,6 +1,7 @@
 import random
 import json
 import os
+import math
 
 # GLOBAL VARS
 # Dataset
@@ -9,9 +10,11 @@ BLUFF_PROB_DICT = {'f': {'sagerbot': 0.03808165057067603, 'jvegas2': 0.077539641
 STAGES = ["f", "t", "r"]
 DATA_FOLDER = '/Users/tetsu/Documents/School/Class/CGSC 472/aotm_project/data'
 SIMULATION_RESULTS_FOLDER = f'{DATA_FOLDER}/simulation_results'
-PARAMS = ['optimal']
+PARAMS = ["optimal", 'no zeroes']
 # variable_type_list = ["optimal", "over_confidence", "under_confidence"]
 
+def round_down_to_10s(x):
+        return int(math.floor(x / 10.0)) * 10
 
 class Util:
     def __init__(self):
@@ -68,21 +71,32 @@ class ProcessPlayerHands:
                         # Ignore hands with undefined bets
                         if self.check_undef(bet_info, STAGES):
                             for stage in STAGES:
-                                
-                                sim_betamount = self.model.simulate(bet_info, stage)
+                                # Ignore hands with bets of zeroes if 'no zeroes' is defined in params
+                                if 'no zeroes' in PARAMS:
+                                    zero_flag = self.check_zero(bet_info, stage)
+                                else:
+                                    zero_flag = 0
+                                if zero_flag == 0:
+                                    sim_betamount = self.model.simulate(bet_info, stage)
 
-                                simvalue = {'id': id, 'stage':stage, 'data':sim_betamount}
-                                obsvalue = {'id': id, 'stage':stage, 'data':bet_info[stage]["bet_info"]["betsize"]}
+                                    simvalue = {'id': id, 'stage':stage, 'data':sim_betamount}
+                                    obsvalue = {'id': id, 'stage':stage, 'data':round_down_to_10s(bet_info[stage]["bet_info"]["betsize"])}
 
-                                simvalues_file.write(json.dumps(simvalue) + '\n') 
-                                obsvalues_file.write(json.dumps(obsvalue) + '\n') 
-                                num -= 1
+                                    simvalues_file.write(json.dumps(simvalue) + '\n') 
+                                    obsvalues_file.write(json.dumps(obsvalue) + '\n') 
+                                    num -= 1
 
     def check_undef(self, bet_info, stages) -> bool:
         for stage in stages:
             if bet_info[stage]["bet_info"]["action"] == "undefined":
                 return False
         return True
+
+    def check_zero(self, bet_info, stage) -> bool:
+        if bet_info[stage]["bet_info"]["betsize"] == 0:
+            return 1
+        else:
+            return 0
 
 class GenModel:
     def __init__(self, player):
@@ -141,27 +155,35 @@ class GenModel:
             return None
 
         else: 
-            # if action == 'c':
-            #     if win_prob >= 0.5:
-            #         optimal_betting_amount = bet_size
-            #         adjusted_betting_amount = self.add_bias(optimal_betting_amount)
-            #         return adjusted_betting_amount
-            # else:
-            optimal_betting_amount = win_prob * pot / (1 - win_prob)
-        
-            adjusted_betting_amount = self.add_bias(optimal_betting_amount)
-            if adjusted_betting_amount < 10 and self._get_bluff_boolean(stage) and win_prob < 0.25:
-                # TODO: How should I apply bluffs (test it empirically)
-                adjusted_betting_amount = (1 - win_prob) * pot / win_prob
-            # Add noise
-            adjusted_betting_amount_with_noise = self._add_noise(adjusted_betting_amount)
+            # Since the database does not have fold, we should discard the datapoints where the action was call
+            # because when the opponent raises, the player only has an option to call, which is not an interesting problem
+            if action == 'c':
+                if win_prob >= 0.5:
+                    optimal_betting_amount = bet_size
+                    adjusted_betting_amount = self.add_bias(optimal_betting_amount, win_prob)
+                    return round_down_to_10s(adjusted_betting_amount)
+            else:
+                optimal_betting_amount = win_prob * pot / (1 - win_prob)
+            
+                adjusted_betting_amount = self.add_bias(optimal_betting_amount, win_prob)
+                if adjusted_betting_amount > 10 and win_prob < 0.25 and self._get_bluff_boolean(stage) :
+                    # TODO: How should I apply bluffs (test it empirically)
+                    adjusted_betting_amount = (1 - win_prob) * pot / win_prob
+                # Add noise
+                adjusted_betting_amount_with_noise = self._add_noise(adjusted_betting_amount)
 
-            if adjusted_betting_amount_with_noise < 0:
-                adjusted_betting_amount_with_noise = 0
-            return adjusted_betting_amount_with_noise
+                if adjusted_betting_amount_with_noise < 0:
+                    adjusted_betting_amount_with_noise = 0
+
+                # Check if the bet is larger than the bankroll and if so, go all-in
+                adjusted_betting_amount_with_noise = round_down_to_10s(adjusted_betting_amount_with_noise)
+
+                # Maybe I should return the bet size to pot ratio instead of the actual amount
+
+                return adjusted_betting_amount_with_noise
         
     # CHANGE THE DEVIATION FROM THE OPTIMAL POLICY DEPENDING ON THE GENERATIVE MODEL TYPE
-    def add_bias(self, optimal_betting_amount):
+    def add_bias(self, optimal_betting_amount, win_prob):
         if "over_confidence" in PARAMS:
             return optimal_betting_amount * 2
         if "optimal" in PARAMS:
@@ -173,7 +195,32 @@ class GenModel:
                 return 0
             else:
                 return optimal_betting_amount
+        if "prospect theory" in PARAMS:
+            return self.prospect_theory_utility(optimal_betting_amount)
+        
+        # Only decide to bet when the gained utility is better than the lost utility
+        if 'prospect theory decision threshold' in PARAMS:
+            if (win_prob * self.prospect_theory_utility(optimal_betting_amount) + (1 - win_prob) * self.prospect_theory_utility(-optimal_betting_amount)) > 0:
+                return self.prospect_theory_utility(optimal_betting_amount)
+            else:
+                return 0
     
+    """
+    Transform a value into utility according to prospect theory.
+
+    :param value: The value to transform into utility.
+    :param reference_point: The reference point around which gains and losses are evaluated (default is 0).
+    :param alpha: The curvature parameter for gains (default is 0.5).
+    :param beta: The curvature parameter for losses (default is 0.5).
+    :param gamma: The loss aversion parameter (default is 0.5).
+    :param delta: The scaling parameter (default is 75).
+    :return: The utility of the value according to prospect theory.
+    """
+    def prospect_theory_utility(self, value, reference_point=0, alpha=0.5, beta=0.5, gamma=0.5, delta=75):
+        if value >= reference_point:
+            return delta * (value - reference_point) ** alpha
+        else:
+            return -gamma * delta * (reference_point - value) ** beta
     
 
 def main():

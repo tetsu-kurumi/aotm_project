@@ -1,0 +1,18 @@
+CURRENT VERSION
+13
+
+VERSION INFOS
+1: ['optimal']
+2: ['optimal']
+3: ['optimal']
+4: ['optimal']
+5: ['prospect theory', 'default values']
+6: ['prospect theory', 'delta = 10']
+7: ['prospect theory', 'delta = 50']
+8: ['prospect theory', 'delta = 75']
+9: ['prospect theory', 'delta = 100']
+10: ['prospect theory decision threshold']
+11: ['prospect theory decision threshold']
+12: ['prospect theory decision threshold', 'no zeroes']
+
+13: ['optimal', 'no zeroes']
